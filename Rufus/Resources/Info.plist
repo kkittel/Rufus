@@ -19,6 +19,21 @@
 		<string>Icon-Small.png</string>
 		<string>Icon-Small@2x.png</string>
 	</array>
+	<key>CFBundleIconFiles~ipad</key>
+	<array>
+		<string>BusterIcon58</string>
+		<string>BusterIcon29</string>
+		<string>BusterIcon80</string>
+		<string>BusterIcon40</string>
+		<string>BusterIcon152</string>
+		<string>BusterIcon76</string>
+		<string>Icon.png</string>
+		<string>Icon@2x.png</string>
+		<string>Icon-72.png</string>
+		<string>Icon-Small-50.png</string>
+		<string>Icon-Small.png</string>
+		<string>Icon-Small@2x.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.yourcompany.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -35,8 +50,6 @@
 	<true/>
 	<key>UIPrerenderedIcon</key>
 	<true/>
-	<key>UIStatusBarHidden</key>
-	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<dict>
 		<key>accelerometer</key>
@@ -44,5 +57,11 @@
 		<key>opengles-1</key>
 		<true/>
 	</dict>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
 </dict>
 </plist>

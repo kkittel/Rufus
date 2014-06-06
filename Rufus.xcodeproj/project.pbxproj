@@ -122,6 +122,12 @@
 		09D79490182EE008001BA26C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D7948F182EE008001BA26C /* AppDelegate.m */; };
 		09D79493182EE008001BA26C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D79492182EE008001BA26C /* RootViewController.m */; };
 		09D79496182EE008001BA26C /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D79495182EE008001BA26C /* HelloWorldLayer.m */; };
+		09D7949E182EE36E001BA26C /* BusterIcon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D7949D182EE36E001BA26C /* BusterIcon76.png */; };
+		09D794A4182EE539001BA26C /* BusterIcon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D7949F182EE539001BA26C /* BusterIcon29.png */; };
+		09D794A5182EE539001BA26C /* BusterIcon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D794A0182EE539001BA26C /* BusterIcon40.png */; };
+		09D794A6182EE539001BA26C /* BusterIcon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D794A1182EE539001BA26C /* BusterIcon58.png */; };
+		09D794A7182EE539001BA26C /* BusterIcon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D794A2182EE539001BA26C /* BusterIcon80.png */; };
+		09D794A8182EE539001BA26C /* BusterIcon152.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D794A3182EE539001BA26C /* BusterIcon152.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,6 +366,12 @@
 		09D79494182EE008001BA26C /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		09D79495182EE008001BA26C /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		09D79497182EE008001BA26C /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		09D7949D182EE36E001BA26C /* BusterIcon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BusterIcon76.png; path = Resources/BusterIcon76.png; sourceTree = "<group>"; };
+		09D7949F182EE539001BA26C /* BusterIcon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BusterIcon29.png; path = Resources/BusterIcon29.png; sourceTree = "<group>"; };
+		09D794A0182EE539001BA26C /* BusterIcon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BusterIcon40.png; path = Resources/BusterIcon40.png; sourceTree = "<group>"; };
+		09D794A1182EE539001BA26C /* BusterIcon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BusterIcon58.png; path = Resources/BusterIcon58.png; sourceTree = "<group>"; };
+		09D794A2182EE539001BA26C /* BusterIcon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BusterIcon80.png; path = Resources/BusterIcon80.png; sourceTree = "<group>"; };
+		09D794A3182EE539001BA26C /* BusterIcon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BusterIcon152.png; path = Resources/BusterIcon152.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +445,12 @@
 		09D7933D182EE005001BA26C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				09D7949F182EE539001BA26C /* BusterIcon29.png */,
+				09D794A0182EE539001BA26C /* BusterIcon40.png */,
+				09D794A1182EE539001BA26C /* BusterIcon58.png */,
+				09D7949D182EE36E001BA26C /* BusterIcon76.png */,
+				09D794A2182EE539001BA26C /* BusterIcon80.png */,
+				09D794A3182EE539001BA26C /* BusterIcon152.png */,
 				09D7933E182EE005001BA26C /* Default.png */,
 				09D79340182EE005001BA26C /* fps_images.png */,
 				09D79342182EE005001BA26C /* Icon-72.png */,
@@ -809,13 +827,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D7933F182EE005001BA26C /* Default.png in Resources */,
+				09D794A5182EE539001BA26C /* BusterIcon40.png in Resources */,
 				09D7934D182EE005001BA26C /* Icon@2x.png in Resources */,
+				09D794A4182EE539001BA26C /* BusterIcon29.png in Resources */,
 				09D79345182EE005001BA26C /* Icon-Small-50.png in Resources */,
+				09D794A8182EE539001BA26C /* BusterIcon152.png in Resources */,
 				09D79341182EE005001BA26C /* fps_images.png in Resources */,
 				09D79350182EE005001BA26C /* iTunesArtwork in Resources */,
 				09D79349182EE005001BA26C /* Icon-Small@2x.png in Resources */,
 				09D79347182EE005001BA26C /* Icon-Small.png in Resources */,
+				09D794A7182EE539001BA26C /* BusterIcon80.png in Resources */,
 				09D7934B182EE005001BA26C /* Icon.png in Resources */,
+				09D794A6182EE539001BA26C /* BusterIcon58.png in Resources */,
+				09D7949E182EE36E001BA26C /* BusterIcon76.png in Resources */,
 				09D79343182EE005001BA26C /* Icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -977,8 +1001,10 @@
 				GCC_PREFIX_HEADER = Rufus/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = Rufus/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -992,8 +1018,10 @@
 				GCC_PREFIX_HEADER = Rufus/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = Rufus/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
