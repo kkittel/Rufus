@@ -1,0 +1,5 @@
+Recursion Iteration: 2
+Action: find one fact plus am yesno 
+Object 1:i a computer program 
+Object 2: 
+Sentence pattern: am < i a computer program > 

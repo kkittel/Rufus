@@ -1,0 +1,5 @@
+Recursion Iteration: 1
+Action: undefined 
+Object 1:do you poop 
+Object 2: 
+Sentence pattern: < do you poop > 

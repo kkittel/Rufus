@@ -1,0 +1,50 @@
+﻿/* Log continue speaking */
+"%@ Did continue speaking.\n" = "%@ Did continue speaking.\n";
+
+/* Log pause speaking */
+"%@ Did pause speaking.\n" = "%@ Did pause speaking.\n";
+
+/* Log error delegate message */
+"%@ Encountered error: %@\n" = "%1$@ Encountered error: %2$@\n";
+
+/* Log sync delegate message */
+"%@ Encountered sync message: %@\n" = "%1$@ Encountered sync message: %2$@\n";
+
+/* Log finished speaking delegate message */
+"%@ Speaking finished.\n\n" = "%@ Speaking finished.\n\n";
+
+/* Log finished speaking (but didn't finish) delegate message */
+"%@ Speaking was stopped.\n\n" = "%@ Speaking was stopped.\n\n";
+
+/* Log beginning to speak */
+"%@ Starting to speak: %@\n" = "%1$@ Starting to speak: %2$@\n";
+
+/* Log phoneme delegate message */
+"%@ Will speak phoneme: %d\n" = "%1$@ Will speak phoneme: %2$d\n";
+
+/* Log word delegate message */
+"%@ Will speak word: %@\n" = "%1$@ Will speak word: %2$@\n";
+
+/* Pausing button name (continue) */
+"Continue Speaking" = "Continue Speaking";
+
+/* Pausing button name (pause) */
+"Pause Speaking" = "Pause Speaking";
+
+/* Default phonemes filename */
+"Phonemes.txt" = "Phonemes.txt";
+
+/* Save button name */
+"Save" = "Save";
+
+/* Speaking button name (start) */
+"Start Speaking" = "Start Speaking";
+
+/* Speaking button name (stop) */
+"Stop Speaking" = "Stop Speaking";
+
+/* Default save filename */
+"Synthesized Speech.aiff" = "Synthesized Speech.aiff";
+
+/* Synthesizer Log Title */
+"Synthesizer Log\n" = "Synthesizer Log\n";
