@@ -441,7 +441,9 @@ int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
   int made_it_to_end_of_sentence = FALSE;
   int failsafe = 0;
   int last_pass_for_phrase = 0, last_pass_for_sentence = 0;
-
+  int obj1_pos_found = 0;
+  int obj2_pos_found = 0;
+    
   for (i = 0; i < num_sentence_words; i++)
     for (c = 0; c < WORDSIZE; c++)
       sentence[i][c] = tolower(sentence[i][c]);
@@ -587,6 +589,7 @@ int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
         {
           processing_object1 = TRUE;
 		  found_object++;
+          obj1_pos_found = phrase_pos;
 		  // Experiment
 			//if (phrase_pos == 0 && sentence_pos == 0);
 		  //else
@@ -599,13 +602,24 @@ int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
           {
             processing_object1 = FALSE;
             processing_object2 = TRUE;
+            obj2_pos_found = phrase_pos;
+            
             if (phrase_pos <= num_phrase_words - 2)
               phrase_pos++;
             found_object++;
           } // End if
 
+          else if (processing_object1 && !processing_object2 && obj1_pos_found != phrase_pos)
+          {
+              processing_object1 = FALSE;
+              processing_object2 = TRUE;
+              if (phrase_pos <= num_phrase_words - 2)
+                phrase_pos++;
+              found_object++;
+          }
+            
         } // End else
-
+      
       } // End if <object>
 
       if (processing_object1)

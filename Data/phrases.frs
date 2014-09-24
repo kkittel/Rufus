@@ -210,6 +210,10 @@ is <object> an <object>
 find two facts plus is yesno
 see if a implies b
 normal
+is <object> <object>
+find all facts plus is yesno
+see if a implies b
+normal
 is <object>
 find all facts plus is yesno
 see if a implies b
@@ -431,6 +435,7 @@ undefined
 none
 NORMAL
 END OF FILE
+
 
 
 
