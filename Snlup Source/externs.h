@@ -58,6 +58,8 @@ extern int capture_output;   // Capture output from a script
 extern int rule_fired;       // Mark hypotheses as generated if rule just fired
 extern int output_is_open;   // If TRUE then output file is open, If FALSE start new output file
 extern int write_to_kb;		 // If TRUE then write fact to Knowledge Base
+extern int stripped_s;       // If TRUE prevent match_phrase from infinite looping
+extern int added_s;
 
 // Files
 extern char datapath[PATHLEN];

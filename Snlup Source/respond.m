@@ -126,8 +126,16 @@ void reply(void)
 	  }
       else
 	  {
-        printf("%s ", response[i]);
-		fprintf(output_file, "%s ", response[i]);
+        if (i < num_response_words-1 && ((strcmp(response[i+1], ",")==0)|| (strcmp(response[i+1], "?")==0)))
+        {
+            printf("%s", response[i]);
+            fprintf(output_file, "%s", response[i]);
+        }
+        else
+        {
+            printf("%s ", response[i]);
+            fprintf(output_file, "%s ", response[i]);
+        }
 	  }
     }
     if (intercept == RESPONSE || intercept == MONITOR)

@@ -21,4 +21,14 @@ echo what is your name
 what is your name
 echo is the sky blue
 is the sky blue
+echo what color are apples
+what color are apples
+echo where does john live
+where does john live
+echo what color is a jeep
+what color is a jeep
+echo can a jeep haul things
+can a jeep haul things
+echo does a jeep have 4 wheels
+does a jeep have 4 wheels
 rem capture off

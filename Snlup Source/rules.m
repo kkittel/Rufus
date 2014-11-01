@@ -218,7 +218,7 @@ void find_relative_rules(void)
     temp_group_file = openfile("group5.grp", "r");
     while (!feof(temp_group_file))
 	{
-      num_rwords = parse(rule, temp_group_file, NULL);            // Get a rule from group file
+      num_rwords = parse(rule, temp_group_file, NULL);      // Get a rule from group file
       lookup_phrase(rule, num_rwords, 100, PHRASE, GROUP2); // lookup the rule
       b = choose_phrase(1, PHRASE, phrase, GROUP2);         // Pick first matched phrase
       match_phrase(rule, num_rwords, phrase, b);            // set objects 

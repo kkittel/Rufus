@@ -36,6 +36,7 @@ void do_action(char action[SENTLEN][WORDSIZE], int num_action_words, char
   int yesno = NO, answered = FALSE;
   int save_num_object1_words = 0, object1_saved = FALSE;
   // int finished = FALSE, lastc = 0;
+    int ask = FALSE;
   unsigned long lmaint;
   char *endptr;
   char answer[SENTLEN][WORDSIZE];
@@ -201,7 +202,7 @@ void do_action(char action[SENTLEN][WORDSIZE], int num_action_words, char
     if (strcmp(action[1], "two") == 0)
 	{
       c = find_answers(sentence, num_sent_words);
-
+        
 	  if (answer_yesno)
       {
 	    if( c > 0)
@@ -358,6 +359,7 @@ void do_action(char action[SENTLEN][WORDSIZE], int num_action_words, char
       strcpy(action[0], "say");
       strcpy(action[1], "dont");
       strcpy(action[2], "know");
+      ask = TRUE;
       num_action_words = 3;
     }
   } // End else if find
@@ -413,6 +415,14 @@ void do_action(char action[SENTLEN][WORDSIZE], int num_action_words, char
     num_response_words = 0; // Clear word counts first
     for (i = 0; i < num_answer_words; i++)
       add_response_word(answer[i]);
+    if (ask)
+    {
+        add_response_word(",");
+        for (i = 0; i < num_sent_words; i++)
+            add_response_word(sentence[i]);
+        add_response_word("?");
+        ask = FALSE;
+    }
     add_response_word("\n");
     reply();
   }
@@ -428,12 +438,11 @@ int find_answers(char sentence[SENTLEN][WORDSIZE], int num_sent_words)
     int finished = FALSE;
 
 	c = look_for_relative_facts(ALL);
+    
 	if(c == 0)
 	{
       while(!finished)
 	  {        
-		//c = look_for_relative_facts(ALL);
-		//lastc = c;
 		generate_more_facts(sentence, num_sent_words);
         c = look_for_relative_facts(ALL);
 		if(lastc == c)
@@ -441,7 +450,7 @@ int find_answers(char sentence[SENTLEN][WORDSIZE], int num_sent_words)
 		lastc = c;
 	  }
 	}
-	
+
 	return(c);
 
 } // End proc find_answers
@@ -454,9 +463,10 @@ int find_answers_one_object(char sentence[SENTLEN][WORDSIZE], int num_sent_words
 	int b = 0, c = 0, lastc = 0;
 
 	//b = find_all_facts(object1, num_object1_words, NEW, ALL, GROUP1);
-	b = find_fact(object1, num_object1_words, NEW, MATCH_OBJECT, GROUP1);
+	//b = find_fact(object1, num_object1_words, NEW, MATCH_OBJECT, GROUP1);
+	b = find_fact(object1, num_object1_words, NEW, ALL, GROUP1);
 	
-	if(b == 0)
+    if(b == 0)
 	{
       while(!finished)
 	  {        

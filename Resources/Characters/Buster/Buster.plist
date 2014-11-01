@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
-<plist version="0.9">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
 <dict>
 	<key>Name</key>
 	<string>Buster</string>
@@ -10,7 +10,7 @@
 			<key>FrameImageFileName</key>
 			<string>BusterIdle1.tif</string>
 			<key>FrameDuration</key>
-			<real>10.0</real>
+			<real>10</real>
 		</dict>
 		<dict>
 			<key>FrameImageFileName</key>
@@ -22,7 +22,7 @@
 			<key>FrameImageFileName</key>
 			<string>BusterIdle1.tif</string>
 			<key>FrameDuration</key>
-			<real>6.0</real>
+			<real>6</real>
 		</dict>
 		<dict>
 			<key>FrameImageFileName</key>
@@ -34,13 +34,13 @@
 			<key>FrameImageFileName</key>
 			<string>BusterIdle1.tif</string>
 			<key>FrameDuration</key>
-			<real>10.0</real>
+			<real>10</real>
 		</dict>
 		<dict>
 			<key>FrameImageFileName</key>
 			<string>BusterIdle2.tif</string>
 			<key>FrameDuration</key>
-			<real>2.0</real>
+			<real>2</real>
 		</dict>
 		<dict>
 			<key>FrameImageFileName</key>
@@ -52,7 +52,7 @@
 			<key>FrameImageFileName</key>
 			<string>BusterIdle4.tif</string>
 			<key>FrameDuration</key>
-			<real>1.0</real>
+			<real>1</real>
 		</dict>
 	</array>
 	<key>ExpressionIdentifierConsonant</key>
@@ -61,7 +61,7 @@
 			<key>FrameImageFileName</key>
 			<string>BusterClosed.tif</string>
 			<key>FrameDuration</key>
-			<real>0.0</real>
+			<real>0</real>
 		</dict>
 	</array>
 	<key>ExpressionIdentifierVowel</key>
@@ -70,7 +70,7 @@
 			<key>FrameImageFileName</key>
 			<string>BusterOpen.tif</string>
 			<key>FrameDuration</key>
-			<real>0.0</real>
+			<real>0</real>
 		</dict>
 	</array>
 	<key>ExpressionIdentifierSleep</key>
@@ -79,7 +79,7 @@
 			<key>FrameImageFileName</key>
 			<string>BusterSleep.tif</string>
 			<key>FrameDuration</key>
-			<real>0.0</real>
+			<real>0</real>
 		</dict>
 	</array>
 </dict>

@@ -1,5 +1,5 @@
-Recursion Iteration: 2
-Action: find all facts plus is yesno 
-Object 1:the 
-Object 2: sky blue 
-Sentence pattern: is < the > < sky blue > 
+Recursion Iteration: 1
+Action: find one fact 
+Object 1:die 
+Object 2: 
+Sentence pattern: when will i < die > 

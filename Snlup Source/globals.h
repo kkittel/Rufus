@@ -58,6 +58,8 @@ int capture_output=FALSE;   // Capture output from running a script
 int rule_fired=FALSE;       // Mark hypotheses as generated if rule just fired
 int output_is_open=FALSE;   // If TRUE then output file is open, If FALSE start new output file
 int write_to_kb=FALSE;      // If TRUE then write fact to Knowledge Base
+int stripped_s=FALSE;       // If TRUE keep match_phrase from infinite looping
+int added_s=FALSE;
 
 // Files
 char datapath[PATHLEN];

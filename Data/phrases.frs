@@ -1,3 +1,43 @@
+<object> will never <object>
+record fact temporary
+a impliesnot b
+none
+when will i <object>
+find one fact
+see if a implies b
+none
+when was i <object>
+find one fact
+see if a implies b
+none
+where does <object> <object>
+find two facts
+see if a implies b
+normal
+<object> lives in <object>
+record fact temporary
+a implies b
+normal
+what <object> do i <object>
+find two facts
+see if a implies b
+normal
+what did <object> do with <object>
+find two facts
+see if a implies b
+normal
+<object> loves to <object>
+record fact temporary
+a implies b
+normal
+what did <object>
+find one fact
+see if a implies b
+normal
+<object> chased <object>
+record fact temporary
+a implies b
+normal
 what's my <object>
 find one fact
 see if a implies b
@@ -35,7 +75,7 @@ find one fact plus am yesno
 see if a implies b
 normal
 can <object>
-find one fact plus am yesno
+find one fact yesno
 see if a implies b
 normal
 how many <object> does <object> have
@@ -103,11 +143,11 @@ find two facts
 ask question with two objects
 normal
 who am <object>
-find one fact plus are
+find one fact plus am
 see if a implies b
 normal
 what am <object>
-find one fact plus are
+find one fact plus am
 see if a implies b
 normal
 if <object> then <object>
@@ -143,7 +183,7 @@ find one fact plus is
 see if a implies b
 normal
 what are <object>
-find one fact plus are
+find one fact
 see if a implies b
 normal
 who are <object>
@@ -190,6 +230,10 @@ tell me about <object>
 find one facts
 see if a implies b
 normal
+is the <object> <object>
+find all facts plus is yesno
+see if a implies b
+none
 is this <object>
 find one facts plus is yesno
 see if a implies b
@@ -435,6 +479,21 @@ undefined
 none
 NORMAL
 END OF FILE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

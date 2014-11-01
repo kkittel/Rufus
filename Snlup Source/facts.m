@@ -188,17 +188,17 @@ int look_for_relative_facts(int search_flag)
 
   copyfile("group.grp", "think.tmp");  // EXPERIMENTAL
 
-  if (c == 0) // EXPERIMENTAL
+  if (c >= 0) // EXPERIMENTAL - Always look for substitutions
   {
     // Make substitutions and look again
     // Substitute object 1 first
-	c = 0;
+	//c = 0;
     a = find_fact(object1, num_object1_words, NEW, search_flag, GROUP1);
     group_file = openfile("group.grp", "r");
     for (b = 0; b < a; b++)
     {
       // For all substitutions
-      g = parse(temp_fact, group_file, NULL);
+      g = parse(temp_fact, group_file, NULL); // Count words in temp_fact
       num_object2_words = 0; // Clear Object2
       lookup_phrase(temp_fact, g, 100, PHRASE, GROUP2); // lookup a phrase
       h = choose_phrase(1, PHRASE, phrase, GROUP2); // Pick first matched phrase

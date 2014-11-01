@@ -417,6 +417,83 @@ int lookup_phrase(char phrasein[SENTLEN][WORDSIZE], int num_phrasein_words, int
 
 //******************************************************************************
 
+int check_for_plural_object(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
+                             phrase[SENTLEN][WORDSIZE], int num_phrase_words)
+{
+    int c=0, foundit=0;
+    FILE *swords_file;
+    int num_words=0;
+    char word[SENTLEN][WORDSIZE];
+    int sword=0;
+    int found_sword=FALSE;
+    
+    // See if object ends in 's'
+    if (!stripped_s && !added_s)
+    {
+    
+        for (c = 0; c < WORDSIZE-1; c++)
+        {
+            // Find end of word
+            if (phrase[num_phrase_words-1][c] == '\0')
+                break;
+        }
+
+        // If word ends in s
+        if (phrase[num_phrase_words-1][c-1] == 's')
+        {
+            //printf("Strip an s from the object\n");
+            //printf("Object = %s\n", phrase[num_phrase_words-1]);
+            
+            // Try without s
+            phrase[num_phrase_words-1][c-1] = '\0';
+            //printf("New Object = %s\n", phrase[num_phrase_words-1]);
+            stripped_s = TRUE;
+        }
+        else
+        {
+            //printf("Add an s to the object\n");
+            //printf("Object = %s\n", phrase[num_phrase_words-1]);
+            phrase[num_phrase_words-1][c] = 's';
+            phrase[num_phrase_words-1][c+1] = '\0';
+            //printf("New Object = %s\n", phrase[num_phrase_words-1]);
+            added_s = TRUE;
+        }
+        
+        // Make sure phrase is not a common word that ends in s
+        
+        swords_file = openfile("swords.txt", "r");
+        
+        while (!feof(swords_file))
+        {
+            num_words = parse(word, swords_file, NULL);
+            sword = exact_match(word, num_words, phrase, num_phrase_words);
+            if (sword)
+            {
+                found_sword = TRUE;
+                break;
+            }
+        }
+
+        closefile(swords_file);
+     
+        foundit = 0;
+        if (!found_sword)
+           foundit = match_phrase(sentence, num_sentence_words, phrase, num_phrase_words);
+    }
+
+    if (stripped_s)
+        stripped_s = FALSE;
+    if (added_s)
+        added_s = FALSE;
+    
+    if (foundit == 100)
+        return(foundit);
+    else
+        return(0);
+}
+
+//******************************************************************************
+
 int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
   phrase[SENTLEN][WORDSIZE], int num_phrase_words)
 {
@@ -525,7 +602,7 @@ int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
       return (return_value);
     }
     else
-      return (0);
+      return (check_for_plural_object(temp_sent, num_temp_sent_words, temp_phrase, num_temp_phrase_words));
   } // End Simple search #1
 
   found = 0;
@@ -544,7 +621,7 @@ int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
       return (return_value);
     }
     else
-      return (0);
+      return (check_for_plural_object(temp_sent, num_temp_sent_words, temp_phrase, num_temp_phrase_words));
   } // End Simple Search #2
 
   sentence_pos = 0;
@@ -786,7 +863,7 @@ int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
 
   else
   {
-    // Restore original objects
+   // Restore original objects
 
     num_object1_words = save_num_object1_words;
     num_object2_words = save_num_object2_words;
@@ -808,7 +885,7 @@ int match_phrase(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
 int match_object(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
 				 phrase[SENTLEN][WORDSIZE], int num_phrase_words)
 {
-	int i = 0, c = 0,return_value=0, best=0, found=0;;
+	int i = 0, c = 0,return_value=0, best=0, found=0;
 	int loop = 0, sentence_pos=0, phrase_pos=0;;
 	int foundit=0;
 	
@@ -827,7 +904,7 @@ int match_object(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
 		return (0);
 	
 
-	 // New Simple Search - see if the words are all be in a row
+	 // New Simple Search - see if the words are all in a row
 	 for (sentence_pos = 0; sentence_pos < num_sentence_words; sentence_pos++)
 	 {
 		 for (phrase_pos = 0; phrase_pos < num_phrase_words; phrase_pos++)
@@ -868,7 +945,7 @@ int match_object(char sentence[SENTLEN][WORDSIZE], int num_sentence_words, char
 	if (found < best)
 		found = best;
 	*/
-	
+        
 	if (found)
     {
 		return_value = (found *100 / num_phrase_words);
