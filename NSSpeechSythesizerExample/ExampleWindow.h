@@ -10,6 +10,7 @@
 #import "OptionsSheet.h"
 #import "SpeakingCharacterView.h"
 #import "newPhraseWindowController.h"
+#import "DebugSnlupWindowController.h"
 
 @interface NSSpeechExampleWindow : NSWindowController <NSSpeechSynthesizerDelegate> {
 
@@ -35,10 +36,12 @@
 	NSString *						final;
 	newPhraseWindowController *		winController;
 	IBOutlet NSMenuItem	*			closeMenuItem;
+    DebugSnlupWindowController *    debugController;
 }
 
 @property (retain, nonatomic) NSString						*final;
 @property (nonatomic, retain) newPhraseWindowController		*winController;
+@property (nonatomic, retain) DebugSnlupWindowController	*debugController;
 @property (nonatomic, retain) IBOutlet NSMenuItem			*closeMenuItem;
 
 - (IBAction)startOrStopSpeaking:(id)sender;
@@ -53,6 +56,7 @@
 - (IBAction)clearContext:(id)sender;
 - (IBAction)newPhraseWindow:(id)sender;
 - (IBAction)callTextEdit:(id)sender;
+- (IBAction)debugRufus:(id)sender;
 
 @end
 

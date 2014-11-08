@@ -12,6 +12,7 @@
 #import "io.h"
 #import "hypothesis.h"
 #import "newPhraseWindowController.h"
+#import "DebugSnlupWindowController.h"
 
 @interface NSSpeechExampleWindow (NSSpeechExampleWindowPrivate)
 - (void)_appendLogString:(NSString *)string;
@@ -24,7 +25,7 @@
 @synthesize final;
 @synthesize winController;
 @synthesize closeMenuItem;
-
+@synthesize debugController;
 
 #pragma mark Public Methods
 - (void)awakeFromNib
@@ -418,6 +419,22 @@
     [winController showWindow:self];
 }
 
+- (IBAction)debugRufus:(id)sender
+{
+	debugController = [[DebugSnlupWindowController alloc] init];
+    [debugController showWindow:self];
+}
+
+- (IBAction)openFactsper:(id)sender
+{
+	NSTask *task = [[NSTask alloc] init];
+	[task setLaunchPath:@"/Applications/TextEdit.app/Contents/MacOS/TextEdit"];
+	NSArray *args = [NSArray arrayWithObjects: @"/Users/klkittel/Documents/Rufus/Data/facts.per", nil];
+    [task setArguments: args];
+	[task launch];
+	[task release];
+}
+
 - (IBAction)callTextEdit:(id)sender
 {
 	NSTask *task = [[NSTask alloc] init];
@@ -428,11 +445,9 @@
 	[task release];
 }
 
-/*
-- (void)openfile
-{
-	int i; // Loop counter.
 
+- (IBAction)openfile:(id)sender
+{
 	// Create the File Open Dialog class.
 	NSOpenPanel* openDlg = [NSOpenPanel openPanel];
 
@@ -446,20 +461,21 @@
 	// process the files.
 	if ( [openDlg runModal] == NSOKButton )
 	{
-		// Get an array containing the full filenames of all
-		// files and directories selected.
-		NSArray* files = [openDlg filenames];
-	
-		// Loop through all the files and process them.
-		for( i = 0; i < [files count]; i++ )
-		{
-			NSString* fileName = [files objectAtIndex:i];
-		
-			// Do something with the filename.
+        // Loop through all the files and process them.
+        for( NSURL* URL in [openDlg URLs] )
+        {
+            NSLog( @"Filename: %@", [URL path] );
+            
+            NSTask *task = [[NSTask alloc] init];
+            [task setLaunchPath:@"/Applications/TextEdit.app/Contents/MacOS/TextEdit"];
+            NSArray *args = [NSArray arrayWithObjects:[URL path], nil];
+            [task setArguments: args];
+            [task launch];
+            [task release];
 		}
 	}
 }
-*/
+
 
 - (void)dealloc
 {

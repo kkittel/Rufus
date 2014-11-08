@@ -1,3 +1,7 @@
+<object> that can <object>
+record fact temporary
+a implies b
+none
 <object> will never <object>
 record fact temporary
 a impliesnot b
@@ -254,6 +258,10 @@ is <object> an <object>
 find two facts plus is yesno
 see if a implies b
 normal
+is a <object> <object>
+find all facts plus is yesno
+see if a implies b
+none
 is <object> <object>
 find all facts plus is yesno
 see if a implies b
@@ -279,7 +287,7 @@ find two facts yesno
 see if a implies b
 normal
 are <object>
-find all facts plus yesno
+find all facts yesno
 see if a implies b
 normal
 <object> is here
@@ -479,6 +487,9 @@ undefined
 none
 NORMAL
 END OF FILE
+
+
+
 
 
 

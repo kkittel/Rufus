@@ -207,11 +207,14 @@ void collect_hypotheses(void)
 	  num_words = parse(fact, temp_file, NULL)-1;
       if (strcmp(fact[num_words], "l") == 0 && num_words > 0)
         store_hypothesis(fact, num_words, FACT, SKIP_TEMP);
+        // Erase fact from temp facts file
 	}
 
     closefile(temp_file);
   }
-
+  
+  erase_temp_fact_file(); // Erase the temp facts file
+    
   if (access_file("rules.tmp")==0)
   {
     temp_file = openfile("rules.tmp", "r");

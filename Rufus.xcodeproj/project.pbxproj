@@ -89,7 +89,8 @@
 		09CC62C7147F10FF00CB1275 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09CC62C3147F10FF00CB1275 /* Localizable.strings */; };
 		09CC632D147F1AFD00CB1275 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 09CC632C147F1AFD00CB1275 /* MainMenu.nib */; };
 		09CD87F2147F36D6005185C1 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = 09CD87ED147F36D6005185C1 /* Help */; };
-		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
+		09FCAF791A074840008EF467 /* DebugSnlupWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FCAF771A074840008EF467 /* DebugSnlupWindowController.m */; };
+		09FCAF7A1A074840008EF467 /* DebugSnlupWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FCAF781A074840008EF467 /* DebugSnlupWindowController.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
@@ -200,9 +201,11 @@
 		09CC62C4147F10FF00CB1275 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
 		09CC632C147F1AFD00CB1275 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
 		09CD87ED147F36D6005185C1 /* Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
+		09FCAF761A074840008EF467 /* DebugSnlupWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugSnlupWindowController.h; path = NSSpeechSythesizerExample/DebugSnlupWindowController.h; sourceTree = "<group>"; };
+		09FCAF771A074840008EF467 /* DebugSnlupWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugSnlupWindowController.m; path = NSSpeechSythesizerExample/DebugSnlupWindowController.m; sourceTree = "<group>"; };
+		09FCAF781A074840008EF467 /* DebugSnlupWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DebugSnlupWindowController.xib; path = NSSpeechSythesizerExample/DebugSnlupWindowController.xib; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MyDocument.xib; sourceTree = "<group>"; };
 		2564AD2C0F5327BB00F57823 /* Rufus_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rufus_Prefix.pch; sourceTree = "<group>"; };
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -373,6 +376,16 @@
 			path = Resources/English.lproj;
 			sourceTree = "<group>";
 		};
+		09FCAF7B1A074875008EF467 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				09CC632C147F1AFD00CB1275 /* MainMenu.nib */,
+				09CC61DE147F0FD100CB1275 /* newPhraseWindow.xib */,
+				09FCAF781A074840008EF467 /* DebugSnlupWindowController.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +418,7 @@
 				09CC61F7147F103200CB1275 /* Snlup Source */,
 				09CC61E3147F0FF600CB1275 /* NSSpeechSythesizerExample */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				09FCAF7B1A074875008EF467 /* Xibs */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
@@ -416,6 +430,8 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				09FCAF761A074840008EF467 /* DebugSnlupWindowController.h */,
+				09FCAF771A074840008EF467 /* DebugSnlupWindowController.m */,
 				09CC61E0147F0FE200CB1275 /* newPhraseWindowController.h */,
 				09CC61E1147F0FE900CB1275 /* newPhraseWindowController.m */,
 			);
@@ -435,15 +451,12 @@
 			isa = PBXGroup;
 			children = (
 				09CD87ED147F36D6005185C1 /* Help */,
-				09CC632C147F1AFD00CB1275 /* MainMenu.nib */,
 				09CC62C2147F10FF00CB1275 /* English.lproj */,
 				09CC62AA147F10ED00CB1275 /* Characters */,
 				09CC6291147F109600CB1275 /* BusterIdle1.icns */,
-				09CC61DE147F0FD100CB1275 /* newPhraseWindow.xib */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* Rufus-Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
-				1DDD58280DA1D0D100B32029 /* MyDocument.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -512,7 +525,6 @@
 			files = (
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
-				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				09CC61DF147F0FD100CB1275 /* newPhraseWindow.xib in Resources */,
 				09CC625C147F104600CB1275 /* .lbl in Resources */,
 				09CC625D147F104600CB1275 /* .var in Resources */,
@@ -556,6 +568,7 @@
 				09CC6288147F104600CB1275 /* personality.fct in Resources */,
 				09CC6289147F104600CB1275 /* phrases.frs in Resources */,
 				09CC628A147F104600CB1275 /* preproc.txt in Resources */,
+				09FCAF7A1A074840008EF467 /* DebugSnlupWindowController.xib in Resources */,
 				09CC628B147F104600CB1275 /* purposes.txt in Resources */,
 				09CC628C147F104600CB1275 /* response.rsp in Resources */,
 				09CC628D147F104600CB1275 /* subjects.per in Resources */,
@@ -594,6 +607,7 @@
 				09CC6217147F103200CB1275 /* actions.m in Sources */,
 				09CC6218147F103200CB1275 /* database.m in Sources */,
 				09CC6219147F103200CB1275 /* facts.m in Sources */,
+				09FCAF791A074840008EF467 /* DebugSnlupWindowController.m in Sources */,
 				09CC621A147F103200CB1275 /* groups.m in Sources */,
 				09CC621B147F103200CB1275 /* hypothesis.m in Sources */,
 				09CC621C147F103200CB1275 /* io.m in Sources */,
@@ -625,14 +639,6 @@
 				09CC62C4147F10FF00CB1275 /* English */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		1DDD58280DA1D0D100B32029 /* MyDocument.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1DDD58290DA1D0D100B32029 /* English */,
-			);
-			name = MyDocument.xib;
 			sourceTree = "<group>";
 		};
 		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {

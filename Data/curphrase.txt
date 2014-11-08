@@ -1,5 +1,5 @@
-Recursion Iteration: 1
-Action: find one fact 
-Object 1:die 
-Object 2: 
-Sentence pattern: when will i < die > 
+Recursion Iteration: 2
+Action: find two facts yesno 
+Object 1:a jeep 
+Object 2: 4 wheels 
+Sentence pattern: does < a jeep > have < 4 wheels > 

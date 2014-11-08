@@ -88,10 +88,8 @@ void reduce_objects(void)
       reduced = TRUE;
     if (!reduced)
     {
-      num_phrase_words = choose_phrase(1, PHRASE, phrase, GROUP1);
-        // Pick first matched phrase
-      match_phrase(input, num_input_words, phrase, num_phrase_words);
-        // set objects
+      num_phrase_words = choose_phrase(1, PHRASE, phrase, GROUP1);    // Pick first matched phrase
+      match_phrase(input, num_input_words, phrase, num_phrase_words); // set objects
     }
     if (num_object1_words == num_input_words)
       reduced = TRUE;
