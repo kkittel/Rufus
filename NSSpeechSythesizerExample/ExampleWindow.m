@@ -456,7 +456,16 @@
 
 	// Enable the selection of directories in the dialog.
 	[openDlg setCanChooseDirectories:YES];
-
+    
+    // Get the path to the Data folder
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    documentsDirectory = [documentsDirectory stringByAppendingString:@"/Rufus/Data"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:documentsDirectory];
+    
+    // Default to open Rufus/Data
+    [openDlg setDirectoryURL:fileURL];
+     
 	// Display the dialog.  If the OK button was pressed,
 	// process the files.
 	if ( [openDlg runModal] == NSOKButton )
